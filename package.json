@@ -1,0 +1,51 @@
+{
+  "name": "@saascannon/spa-react",
+  "version": "0.0.3",
+  "description": "React wrapper for @saascannon/spa",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": {
+    "name": "Saascannon",
+    "email": "support@saascannon.com",
+    "url": "https://saascannon.com"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0"
+  },
+  "dependencies": {
+    "@saascannon/spa": "0.0.7"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18"
+  },
+  "keywords": [
+    "saascannon",
+    "saas",
+    "spa",
+    "single page application",
+    "react"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "homepage": "https://github.com/saascannon/spa-react",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saascannon/spa-react.git"
+  }
+}
