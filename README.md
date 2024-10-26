@@ -22,7 +22,7 @@ npm i @saascannon/spa-react
     import { apiClient } from "./utils/api"
 
     const saascannonConfig = {
-        domain: "your-domain.region.saascannon.app",
+        domain: "your-tenant.region.saascannon.app",
         clientId: "your-client-id",
         redirectUri: "http://localhost:3000/callback",
     };
@@ -143,7 +143,7 @@ import React from "react";
 import { SaascannonProvider, useSaascannon } from "@saascannon/spa-react";
 
 const saascannonConfig = {
-  domain: "your-domain.saascannon.com",
+  domain: "your-tenant.region.saascannon.app",
   clientId: "your-client-id",
   redirectUri: "http://localhost:3000/callback",
 };
