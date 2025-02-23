@@ -41,7 +41,7 @@ export const SaascannonProvider = ({
 
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
-  const client = useRef<SaascannonSpaClient>();
+  const client = useRef<SaascannonSpaClient | null>(null);
 
   useEffect(() => {
     if (client.current) {

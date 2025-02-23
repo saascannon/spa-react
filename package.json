@@ -12,11 +12,14 @@
   },
   "type": "module",
   "scripts": {
+    "gen-package-lock": "npm i --package-lock-only --workspaces false",
     "build": "tsup",
     "dev": "tsup --watch"
   },
   "devDependencies": {
-    "tsup": "^8.3.0"
+    "@types/react": "^19.0.10",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "@saascannon/spa": "0.0.7"
