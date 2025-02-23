@@ -1,6 +1,6 @@
 {
   "name": "@saascannon/spa-react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React wrapper for @saascannon/spa",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -23,7 +23,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@saascannon/spa": "0.0.7"
+    "@saascannon/spa": "^0.0.9"
   },
   "peerDependencies": {
     "react": "^17 || ^18",
