@@ -1,12 +1,7 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useRef,
-  useState,
-} from "react";
+"use client";
+
 import SaascannonSpaClient, { Options } from "@saascannon/spa";
+import React from "react";
 
 type SaascannonSpaClientReact = Pick<
   SaascannonSpaClient,
@@ -20,9 +15,9 @@ type SaascannonSpaClientReact = Pick<
   | "shopManagement"
 >;
 
-const SaascannonContext = createContext<SaascannonSpaClientReact | undefined>(
-  undefined,
-);
+const SaascannonContext = React.createContext<
+  SaascannonSpaClientReact | undefined
+>(undefined);
 
 type SaascannonProviderProps = {
   children?: React.ReactNode;
@@ -37,13 +32,13 @@ export const SaascannonProvider = ({
   config,
   clientInitialised,
 }: SaascannonProviderProps): React.JSX.Element => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = React.useState<boolean>(true);
 
-  const [, forceUpdate] = useReducer((x) => x + 1, 0);
+  const [, forceUpdate] = React.useReducer((x) => x + 1, 0);
 
-  const client = useRef<SaascannonSpaClient | null>(null);
+  const client = React.useRef<SaascannonSpaClient | null>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (client.current) {
       return;
     }
@@ -90,7 +85,7 @@ export const SaascannonProvider = ({
 };
 
 export const useSaascannon: () => SaascannonSpaClientReact = () => {
-  const context = useContext(SaascannonContext);
+  const context = React.useContext(SaascannonContext);
 
   if (!context) {
     throw new Error(

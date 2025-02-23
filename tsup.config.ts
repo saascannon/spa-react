@@ -8,4 +8,5 @@ export default defineConfig({
   sourcemap: false,
   clean: true,
   dts: true,
+  external: ["react", "react-dom"],
 });
